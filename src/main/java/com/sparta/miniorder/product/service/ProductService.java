@@ -47,7 +47,7 @@ public class ProductService {
         productRepository.delete(product);
     }
 
-    private Product findProductById(Long id) {
+    public Product findProductById(Long id) {
         return productRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 상품이 존재하지 않습니다. id=" + id));
     }
